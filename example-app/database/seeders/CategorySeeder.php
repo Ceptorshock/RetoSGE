@@ -17,6 +17,11 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::factory()->count(5)->create();
+        //Category::factory()->count(5)->create();
+        DB::table('categories')->insert([
+            ['name' => 'Cadena de Produccion'],
+            ['name' => 'Recepcion'],
+            ['name' => 'Programadores']
+        ]);
     }
 }

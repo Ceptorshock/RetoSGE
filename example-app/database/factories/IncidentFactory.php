@@ -19,10 +19,12 @@ class IncidentFactory extends Factory
         return [
             'title' => fake()->sentence(),
             'text' => fake()->sentence(),
-            'stimated_time' => fake()->numberBetween(5,60),
+            'estimated_time' => fake()->numberBetween(5,60),
             'user_id' => fake()->numberBetween(1,5),
             'department_id' => fake()->numberBetween(1,5),
-            'category_id' => fake()->numberBetween(1,5)
+            'category_id' => fake()->numberBetween(1,3),
+            'priority_id' => fake()->numberBetween(1,3),
+            'status_id' => fake()->numberBetween(1,3)
         ];
     }
 }

@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+use App\Models\User;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
+
 class CategoryController extends Controller
 {
     /**
@@ -12,7 +16,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::with(['incidents' => function($query) {
+            $query->orderBy('incidents.created_at', 'desc');
+        }])->get();
+        return view('categories.index',['categories'=>$categories]);
     }
 
     /**
@@ -36,7 +43,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        $categories = Category::with(['incidents' => function($query) {
+            $query->orderBy('incidents.created_at', 'desc');
+        }])->where('id',$category->id)->first();
+        return view('categories.show',['categories'=>$categories]);
     }
 
     /**

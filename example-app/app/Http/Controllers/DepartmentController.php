@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use Illuminate\Http\Request;
 
+use App\Models\User;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
+
+
+
 class DepartmentController extends Controller
 {
     /**
@@ -12,7 +18,10 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+        $departments = Department::with(['incidents' => function($query) {
+            $query->orderBy('incidents.created_at', 'desc');
+        }])->get();
+        return view('departments.index',['departments'=>$departments]);
     }
 
     /**
@@ -36,7 +45,10 @@ class DepartmentController extends Controller
      */
     public function show(Department $department)
     {
-        //
+        $departments = Department::with(['incidents' => function($query) {
+            $query->orderBy('incidents.created_at', 'desc');
+        }])->where('id',$department->id)->first();
+        return view('departments.show',['departments'=>$departments]);
     }
 
     /**

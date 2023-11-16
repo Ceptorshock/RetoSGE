@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('incident_id');
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('incident_id')->references('id')->on('incidents');
+            $table->foreign('incident_id')->references('id')->on('incidents')->cascadeOnDelete();  //Si se borra incidencia, se borran comentarios.
         });
     }
 

@@ -8,9 +8,25 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    public function comments(): HasMany {
+         return $this->hasMany(Comment::class);
+    }
+
+     public function incidents(): HasMany {
+         return $this->hasMany(Incident::class);
+    }
+
+    public function department(): BelongsTo {
+         return $this->belongsTo(Department::class);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +37,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'department_id'
     ];
 
     /**

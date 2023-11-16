@@ -17,10 +17,10 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            'text' => fake()->paragraph(),
+            'text' => fake()->text(),
             'used_time' => fake()->numberBetween(1,60),
             'user_id' => fake()->numberBetween(1,5),
-            'incident_id' => fake()->numberBetween(1,5)
+            'incident_id' => fake()->numberBetween(1,10)
         ];
     }
 }
