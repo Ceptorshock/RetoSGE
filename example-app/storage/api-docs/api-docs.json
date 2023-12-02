@@ -1,0 +1,238 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/incidents": {
+            "get": {
+                "summary": "Show incidents",
+                "operationId": "425a4524d8199f555c5068f654fb3a49",
+                "responses": {
+                    "200": {
+                        "description": "Shows all incidents."
+                    },
+                    "default": {
+                        "description": "Error has ocurred."
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create an incident",
+                "operationId": "0f6ae57a35fbe14846d3114598e8320b",
+                "parameters": [
+                    {
+                        "name": "Title",
+                        "in": "query",
+                        "description": "The title of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Text",
+                        "in": "query",
+                        "description": "The body of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Estimated Time",
+                        "in": "query",
+                        "description": "Estimated time of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Category",
+                        "in": "query",
+                        "description": "Category of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Priority",
+                        "in": "query",
+                        "description": "Priority of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Status",
+                        "in": "query",
+                        "description": "Status of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/incidents/{id}": {
+            "get": {
+                "summary": "Shows one incident",
+                "operationId": "97772adf1ae9540b13bb5c3013132e94",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Incident id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shows Incident."
+                    },
+                    "default": {
+                        "description": "Ha ocurrido un error."
+                    }
+                }
+            },
+            "put": {
+                "summary": "Edit an incident",
+                "operationId": "bd99eb910a6cef548f745f6bf9c960e9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Incident id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Title",
+                        "in": "query",
+                        "description": "The title of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Text",
+                        "in": "query",
+                        "description": "The body of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Estimated Time",
+                        "in": "query",
+                        "description": "Estimated time of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Category",
+                        "in": "query",
+                        "description": "Category of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Priority",
+                        "in": "query",
+                        "description": "Priority of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Status",
+                        "in": "query",
+                        "description": "Status of the incident",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Mostrar el post especificado."
+                    },
+                    "default": {
+                        "description": "Ha ocurrido un error."
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete one incident",
+                "operationId": "e5477915dbce66617d4fe5eaefb45729",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Incident id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shows Incident."
+                    },
+                    "default": {
+                        "description": "Ha ocurrido un error."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}

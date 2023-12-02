@@ -1,0 +1,38 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:44643 (IPv4)
+Extension host agent listening on 44643
+
+[16:37:18] 
+
+
+
+
+[16:37:19] Extension host agent started.
+[16:37:19] [127.0.0.1][e8110caa][ManagementConnection] New connection established.
+[16:37:19] [127.0.0.1][1372825b][ExtensionHostConnection] New connection established.
+[16:37:19] [127.0.0.1][1372825b][ExtensionHostConnection] <2403> Launched Extension Host Process.
+[16:37:45] [127.0.0.1][e8110caa][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[16:37:45] [127.0.0.1][1372825b][ExtensionHostConnection] <2403> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[16:37:45] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[16:37:45] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[16:37:47] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[16:37:47] Cancelling previous shutdown timeout
+[16:37:47] [127.0.0.1][3e79d1d0][ManagementConnection] New connection established.
+[16:37:47] [127.0.0.1][66f7a42e][ExtensionHostConnection] New connection established.
+[16:37:47] [127.0.0.1][66f7a42e][ExtensionHostConnection] <2573> Launched Extension Host Process.
+New EH opened, aborting shutdown
+[16:42:47] New EH opened, aborting shutdown
+[18:06:17] [127.0.0.1][3e79d1d0][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[18:06:17] [127.0.0.1][66f7a42e][ExtensionHostConnection] <2573> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[18:06:17] Last EH closed, waiting before shutting down

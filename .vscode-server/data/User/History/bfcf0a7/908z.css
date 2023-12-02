@@ -1,0 +1,11 @@
+.StatusAbierta {
+    background-color: green;
+  }
+  
+  .StatusAsignada {
+    background-color: yellow;
+  }
+  .StatusSolucionada {
+    background-color: red;
+  }
+  

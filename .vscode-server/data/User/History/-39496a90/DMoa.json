@@ -1,0 +1,8 @@
+{
+    "remote.SSH.remotePlatform": {
+        "10.5.7.211": "linux",
+        "16.171.113.49": "linux",
+        "16.170.231.123": "linux",
+        "ceptorshock.ddns.net": "linux"
+    }
+}

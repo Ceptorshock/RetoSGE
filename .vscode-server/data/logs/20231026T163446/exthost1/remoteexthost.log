@@ -1,0 +1,18 @@
+2023-10-26 16:34:49.909 [info] Extension host with pid 2917 started
+2023-10-26 16:34:50.212 [info] ExtensionService#_doActivateExtension vscode.php-language-features, startup: false, activationEvent: 'onLanguage:php'
+2023-10-26 16:34:50.215 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-10-26 16:34:50.215 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2023-10-26 16:34:50.804 [info] Lock '/home/elorrieta/.vscode-server/data/User/workspaceStorage/5ec94f3667a1f87e2bb269f0a554d1c6/vscode.lock': Lock acquired.
+2023-10-26 16:34:50.859 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2023-10-26 16:34:50.860 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2023-10-26 16:34:51.234 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2023-10-26 16:34:52.745 [info] Eager extensions activated
+2023-10-26 16:34:52.745 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-10-26 16:34:52.745 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-10-26 16:36:26.531 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:javascript'
+2023-10-26 16:38:34.429 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:scss'
+2023-10-26 16:50:59.827 [error] Error: read ECONNRESET
+	at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20)
+2023-10-26 17:29:36.635 [info] Extension host terminating: received terminate message from renderer
+2023-10-26 17:29:36.642 [info] Lock '/home/elorrieta/.vscode-server/data/User/workspaceStorage/5ec94f3667a1f87e2bb269f0a554d1c6/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2023-10-26 17:29:36.704 [info] Extension host with pid 2917 exiting with code 0
